@@ -43,6 +43,7 @@ Route::controller(FrontendController::class)->group(function () {
     Route::get('/collections/{category_slug}/{product_slug}','productView');
     Route::get("/new_arrivals",'newArrivals');
     Route::get("/featured",'featured');
+    Route::get('/search','searchProducts');
 });
 
 // WishList
