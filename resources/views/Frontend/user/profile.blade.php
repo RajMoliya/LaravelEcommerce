@@ -7,7 +7,9 @@
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-md-10">
-                    <h4>User Profile</h4>
+                    <h4>User Profile
+                        <a href="{{ url('change-password') }}" class="btn btn-warning float-end">Change Password</a>
+                    </h4>
                     <div class="underline mb-4"></div>
                 </div>
                 <div class="col-md-10">
@@ -41,7 +43,7 @@
                                     <div class="col-md-6">
                                         <div class="mb-3">
                                             <label>Email</label>
-                                            <input type="text" name="email" value="{{ Auth::user()->email }}"
+                                            <input type="text" readonly name="email" value="{{ Auth::user()->email }}"
                                                 class="form-control">
                                         </div>
                                     </div>
