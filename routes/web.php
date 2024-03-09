@@ -14,6 +14,7 @@ use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\Frontend\CheckoutController;
 use App\Http\Controllers\Frontend\FrontendController;
+use App\Http\Controllers\Frontend\UserController as FrontendUserController;
 use App\Http\Controllers\Frontend\WishlistController;
 
 // use App\Models\Category;
@@ -57,6 +58,14 @@ Route::middleware(['auth'])->group(function () {
 Route::middleware(['auth'])->group(function () {
     Route::controller(CartController::class)->group(function () {
         Route::get('/cart','index');
+    });
+});
+
+// User Profile
+Route::middleware(['auth'])->group(function () {
+    Route::controller(FrontendUserController::class)->group(function () {
+        Route::get('/profile','index');
+        Route::post('/profile','updateUserDetails');
     });
 });
 
@@ -136,6 +145,7 @@ Route::prefix('admin')->middleware('auth', 'isAdmin')->group(function () {
 
     // Orders
     Route::controller(OrdersController::class)->group(function () {
+        Route::get('/orders','index');
         Route::get('/orders/{order_id}','show');
         Route::put('/orders/{order_id}','updateOrderStatus');
 
