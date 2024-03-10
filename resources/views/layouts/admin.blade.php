@@ -20,6 +20,15 @@
     <link rel="stylesheet" href="{{ asset('admin/css/style.css') }}">
     <!-- endinject -->
     <link rel="shortcut icon" href="{{ asset('admin/images/favicon.png') }}" />
+    <style>
+        .form-control {
+            border: 1px solid #ddd;
+        }
+
+        .sidebar .nav .nav-item.active {
+            background-color: #e9e9e9;
+        }
+    </style>
     @livewireStyles
 
 </head>
