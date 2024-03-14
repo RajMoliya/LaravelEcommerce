@@ -17,6 +17,7 @@ class Setting extends Model
         'meta_keywords',
         'meta_description',
         'theme_color',
+        'logo',
         'address',
         'phone1',
         'phone2',

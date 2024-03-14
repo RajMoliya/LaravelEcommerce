@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Models\Setting;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\File;
 
 class SettingController extends Controller
 {
@@ -16,6 +17,17 @@ class SettingController extends Controller
     public function store(Request $request){
         $setting = Setting::first();
         if($setting){
+            if ($request->hasFile('logo')) {
+
+                $path = 'uploads/logo/' . $setting->logo;
+                if (File::exists($path)) {
+                    File::delete($path);
+                }
+                $file = $request->file('logo');
+                $ext = $file->getClientOriginalExtension();
+                $filename = time() . '.' . $ext;
+                $file->move('uploads/logo/', $filename);
+            }
             $setting->update([
                 'website_name' => $request->website_name,
                 'website_url' => $request->website_url,
@@ -23,6 +35,7 @@ class SettingController extends Controller
                 'meta_keywords' => $request->meta_keywords,
                 'meta_description' => $request->meta_description,
                 'theme_color' => $request->theme_color,
+                'logo' => $filename,
                 'address' => $request->address,
                 'phone1' => $request->phone1,
                 'phone2' => $request->phone2,
@@ -36,6 +49,10 @@ class SettingController extends Controller
             return redirect()->back()->with('message','Settings Udated Successfully');
 
         }else{
+                $file = $request->file('logo');
+                $ext = $file->getClientOriginalExtension();
+                $filename = time() . '.' . $ext;
+                $file->move('uploads/logo/', $filename);
             Setting::create([
                 'website_name' => $request->website_name,
                 'website_url' => $request->website_url,
@@ -43,6 +60,7 @@ class SettingController extends Controller
                 'meta_keywords' => $request->meta_keywords,
                 'meta_description' => $request->meta_description,
                 'theme_color' => $request->theme_color,
+                'logo' => $filename,
                 'address' => $request->address,
                 'phone1' => $request->phone1,
                 'phone2' => $request->phone2,

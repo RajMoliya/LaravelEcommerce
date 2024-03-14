@@ -8,7 +8,7 @@
             @if (session('message'))
                 <div class="alert alert-success">{{ session('message') }}</div>
             @endif
-            <form action="{{ url('/admin/settings') }}" method="POST">
+            <form action="{{ url('/admin/settings') }}" method="POST" enctype="multipart/form-data">
                 @csrf
                 <div class="card mb-3">
                     <div class="card-header" style="background-color: {{ $setting->theme_color }}">
@@ -43,6 +43,18 @@
                                 <label>Website Theme Color</label>
                                 <input type="text" name="theme_color" value="{{ $setting->theme_color ?? '' }}"
                                     class="form-control">
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label style="margin-bottom: 8px">Upload Logo</label>
+                                <input type="file" name = "logo" multiple class="form-control">
+                                @if ($setting->logo)
+                                    <div class="row">
+                                        <div class="col-md-2">
+                                            <img src="{{ asset('uploads/logo/' . $setting->logo) }}"
+                                                style="width:80px ; height:80px" class="me-4 boarder" alt="Img">
+                                        </div>
+                                    </div>
+                                @endif
                             </div>
                         </div>
                     </div>
