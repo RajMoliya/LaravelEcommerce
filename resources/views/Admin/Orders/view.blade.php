@@ -22,6 +22,8 @@
                             Invoice</a>
                         <a href="{{ url('admin/invoice/' . $orders->id . '/generate') }}"
                             class="btn btn-success btn-sm float-end mx-1">Download Invoice</a>
+                        <a href="{{ url('admin/invoice/' . $orders->id . '/mail') }}"
+                            class="btn btn-info btn-sm float-end mx-1">Mail Invoice</a>
                     </h4>
                 </div>
                 <div class="card-body">

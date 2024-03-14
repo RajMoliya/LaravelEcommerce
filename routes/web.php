@@ -153,6 +153,7 @@ Route::prefix('admin')->middleware('auth', 'isAdmin')->group(function () {
 
         Route::get('/invoice/{oredrId}','viewInvoice');
         Route::get('/invoice/{oredrId}/generate','generateInvoice');
+        Route::get('/invoice/{oredrId}/mail','mailInvoice');
     });
 
     Route::controller(SettingController::class)->group(function () {
