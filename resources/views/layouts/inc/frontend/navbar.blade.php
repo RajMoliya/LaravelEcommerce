@@ -1,5 +1,5 @@
 <div class="main-navbar shadow-sm sticky-top">
-    <div class="top-navbar">
+    <div class="top-navbar" style="background-color: {{ $appSetting->theme_color }}">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-2 my-auto d-none d-sm-none d-md-block d-lg-block">
@@ -96,19 +96,10 @@
                         <a class="nav-link" href="{{ url('/featured') }}">Featured Products</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ url('/') }}">Electronics</a>
+                        <a class="nav-link" href="{{ url('/') }}">About Us</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ url('/') }}">Fashions</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ url('/') }}">Accessories</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ url('/') }}">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ url('/') }}">Appliances</a>
+                        <a class="nav-link" href="{{ url('/') }}">Contact Us</a>
                     </li>
                 </ul>
             </div>

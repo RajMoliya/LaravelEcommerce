@@ -1,5 +1,5 @@
 <div>
-    <div class="footer-area">
+    <div class="footer-area" style="background-color: {{ $appSetting->theme_color }}">
         <div class="container">
             <div class="row">
                 <div class="col-md-3">
@@ -17,8 +17,6 @@
                     <div class="mb-2"><a href="{{ url('/about-us') }}" class="text-white">About Us</a></div>
 
                     <div class="mb-2"><a href="{{ url('/contact-us') }}" class="text-white">Contact Us</a></div>
-                    <div class="mb-2"><a href="{{ url('/blogs') }}" class="text-white">Blogs</a></div>
-                    <div class="mb-2"><a href="{{ url('/sitemap') }}" class="text-white">Sitemaps</a></div>
                 </div>
                 <div class="col-md-3">
                     <h4 class="footer-heading">Shop Now</h4>

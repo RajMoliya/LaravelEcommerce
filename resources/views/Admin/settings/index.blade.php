@@ -11,7 +11,7 @@
             <form action="{{ url('/admin/settings') }}" method="POST">
                 @csrf
                 <div class="card mb-3">
-                    <div class="card-header bg-primary">
+                    <div class="card-header" style="background-color: {{ $setting->theme_color }}">
                         <h3 class="text-white mb-0">Website</h3>
                     </div>
                     <div class="card-body">
@@ -39,11 +39,16 @@
                                 <label>Meta Description</label>
                                 <textarea name="meta_description" class="form-control" rows="3">{{ $setting->meta_description ?? '' }}</textarea>
                             </div>
+                            <div class="col-md-6 mb-3">
+                                <label>Website Theme Color</label>
+                                <input type="text" name="theme_color" value="{{ $setting->theme_color ?? '' }}"
+                                    class="form-control">
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="card mb-3">
-                    <div class="card-header bg-primary">
+                    <div class="card-header" style="background-color: {{ $setting->theme_color }}">
                         <h3 class="text-white mb-0">Website - Information</h3>
                     </div>
                     <div class="card-body">
@@ -76,7 +81,7 @@
                     </div>
                 </div>
                 <div class="card mb-3">
-                    <div class="card-header bg-primary">
+                    <div class="card-header" style="background-color: {{ $setting->theme_color }}">
                         <h3 class="text-white mb-0">Website - Social Media</h3>
                     </div>
                     <div class="card-body">

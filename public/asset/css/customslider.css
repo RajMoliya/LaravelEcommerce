@@ -139,6 +139,27 @@
     margin-bottom: 24px;
 }
 
+.square {
+    width: 100%;
+    height: auto;
+}
+
+.square img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    /* Ensures the image covers the entire container */
+    aspect-ratio: 1;
+    /* Maintains the aspect ratio (1:1) for square images */
+}
+
+.product-card:hover {
+    /* Your styles when hovering over product cards */
+    /* For example: */
+    border-color: #999;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
 .product-card a {
     text-decoration: none;
 }
