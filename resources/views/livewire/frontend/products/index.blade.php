@@ -41,7 +41,7 @@
                 @forelse($products as $productItem)
                     <div class="col-md-4">
                         <div class="product-card">
-                            <div class="product-card-img">
+                            <div class="product-card-img square">
                                 @if ($productItem->quantity > 0)
                                     <label class="stock bg-success">In Stock</label>
                                 @else

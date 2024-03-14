@@ -13,7 +13,7 @@
                 @forelse ($featuredProducts as $productItem)
                     <div class="col-md-3">
                         <div class="product-card">
-                            <div class="product-card-img">
+                            <div class="product-card-img square">
                                 <label class="stock bg-success">New</label>
                                 <a
                                     href="{{ url('/collections/' . $productItem->category->slug . '/' . $productItem->slug) }}">

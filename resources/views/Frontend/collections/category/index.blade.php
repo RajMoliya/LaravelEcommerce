@@ -14,7 +14,7 @@
                     <div class="col-6 col-md-3">
                         <div class="category-card">
                             <a href="{{ url('collections/' . $category->slug) }}">
-                                <div class="category-card-img">
+                                <div class="category-card-img square">
                                     <img src="{{ asset('uploads/category/' . $category->image) }}" class="w-100"
                                         alt="Not Found">
                                 </div>

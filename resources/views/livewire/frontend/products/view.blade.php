@@ -140,7 +140,7 @@
                         @if ($category->relatedProducts)
                             @foreach ($category->relatedProducts as $relatedProductItem)
                                 <div class="item mb-3">
-                                    <div class="product-card">
+                                    <div class="product-card square">
                                         <div class="product-card-img">
                                             <a
                                                 href="{{ url('/collections/' . $relatedProductItem->category->slug . '/' . $relatedProductItem->slug) }}">
@@ -189,7 +189,7 @@
                                 @if ($relatedProductItem->brand == $product->brand)
                                     <div class="item mb-3">
                                         <div class="product-card">
-                                            <div class="product-card-img">
+                                            <div class="product-card-img square">
                                                 <a
                                                     href="{{ url('/collections/' . $relatedProductItem->category->slug . '/' . $relatedProductItem->slug) }}">
                                                     @if ($relatedProductItem->productImages->count() > 0)
