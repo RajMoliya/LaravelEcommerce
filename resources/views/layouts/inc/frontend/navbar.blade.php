@@ -3,7 +3,7 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-2 my-auto d-none d-sm-none d-md-block d-lg-block">
-                    <img style="width: 100px; height:auto" src="{{ asset('uploads/logo/' . $appSetting->logo) }}"
+                    <img style="width: 100px; height:40px" src="{{ asset('uploads/logo/' . $appSetting->logo) }}"
                         alt="Logo" />
                 </div>
                 <div class="col-md-5 my-auto">
@@ -97,10 +97,10 @@
                         <a class="nav-link" href="{{ url('/featured') }}">Featured Products</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ url('/') }}">About Us</a>
+                        <a class="nav-link" href="{{ url('/about-us') }}">About Us</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ url('/') }}">Contact Us</a>
+                        <a class="nav-link" href="{{ url('/contact-us') }}">Contact Us</a>
                     </li>
                 </ul>
             </div>

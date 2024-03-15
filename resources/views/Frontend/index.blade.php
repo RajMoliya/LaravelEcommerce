@@ -7,25 +7,29 @@
         <div class="carousel-inner">
 
             @foreach ($sliders as $key => $sliderItem)
-                <div class="carousel-item {{ $key == 0 ? 'active' : '' }}">
-                    @if ($sliderItem->image)
-                        <img src="{{ asset("$sliderItem->image") }}" class="d-block w-100" style="height: 450px;"
-                            alt="...">
-                    @endif
-                    <div class="carousel-caption d-none d-md-block">
-                        <div class="custom-carousel-content">
-                            <h1>
-                                <h5>{{ $sliderItem->title }}</h5>
-                            </h1>
-                            <p>
-                            <p>{{ $sliderItem->description }}</p>
-                            </p>
-                            <div>
-                                <a href="#" class="btn btn-slider">
-                                    Get Now
-                                </a>
+                <div style="background-color: teal" class="carousel-item {{ $key == 0 ? 'active' : '' }}">
+                    <div>
+                        <span class="carousel-caption d-none d-md-block col-md-6">
+                            <div class="custom-carousel-content">
+                                <h1 class="move-up">
+                                    {{ $sliderItem->title }}
+                                </h1>
+                                <p>
+                                <p class="move-up">{{ $sliderItem->description }}</p>
+                                </p>
+                                <div class="move-up">
+                                    <a href="#" class="btn btn-slider">
+                                        Get Now
+                                    </a>
+                                </div>
                             </div>
-                        </div>
+                        </span>
+                        <span class="col-md-6 float-end">
+                            @if ($sliderItem->image)
+                                <img class="move-up" src="{{ asset("$sliderItem->image") }}" class="d-block w-100"
+                                    style="height: 450px;" alt="...">
+                            @endif
+                        </span>
                     </div>
                 </div>
             @endforeach
@@ -67,13 +71,14 @@
                         <div class="owl-carousel owl-theme trending-product">
                             @foreach ($trendingProducts as $productItem)
                                 <div class="item">
-                                    <div class="product-card">
+                                    <div class="product-card" style="border-radius: 20px">
                                         <div class="product-card-img square">
                                             <label class="stock bg-success">New</label>
                                             <a
                                                 href="{{ url('/collections/' . $productItem->category->slug . '/' . $productItem->slug) }}">
                                                 @if ($productItem->productImages->count() > 0)
-                                                    <img src="{{ asset($productItem->productImages[0]->image) }}"
+                                                    <img class="img-fluid"
+                                                        src="{{ asset($productItem->productImages[0]->image) }}"
                                                         alt="{{ $productItem->name }}">
                                                 @endif
                                             </a>
@@ -121,7 +126,7 @@
                         <div class="owl-carousel owl-theme trending-product">
                             @foreach ($newArrivalsProducts as $productItem)
                                 <div class="item">
-                                    <div class="product-card">
+                                    <div class="product-card" style="border-radius: 20px">
                                         <div class="product-card-img square">
                                             <label class="stock bg-success">New</label>
                                             <a
@@ -175,7 +180,7 @@
                         <div class="owl-carousel owl-theme trending-product">
                             @foreach ($featuredProducts as $productItem)
                                 <div class="item">
-                                    <div class="product-card">
+                                    <div class="product-card" style="border-radius: 20px">
                                         <div class="product-card-img square">
                                             <label class="stock bg-success">New</label>
                                             <a

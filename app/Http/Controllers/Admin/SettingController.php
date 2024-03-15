@@ -27,6 +27,18 @@ class SettingController extends Controller
                 $ext = $file->getClientOriginalExtension();
                 $filename = time() . '.' . $ext;
                 $file->move('uploads/logo/', $filename);
+                $setting->update([
+                    'logo' => $filename,
+                ]);
+            }
+            if($request->picker_color){
+                $setting->update([
+                'theme_color' => $request->picker_color,
+            ]);}
+            if($request->text_color){
+                $setting->update([
+                'theme_color' => $request->text_color,
+            ]);
             }
             $setting->update([
                 'website_name' => $request->website_name,
@@ -34,13 +46,12 @@ class SettingController extends Controller
                 'page_title' => $request->page_title,
                 'meta_keywords' => $request->meta_keywords,
                 'meta_description' => $request->meta_description,
-                'theme_color' => $request->theme_color,
-                'logo' => $filename,
                 'address' => $request->address,
                 'phone1' => $request->phone1,
                 'phone2' => $request->phone2,
                 'email1' => $request->email1,
                 'email2' => $request->email2,
+                'map' => $request->map,
                 'facebook' => $request->facebook,
                 'twitter' => $request->twitter,
                 'instagram' => $request->instagram,
@@ -66,6 +77,7 @@ class SettingController extends Controller
                 'phone2' => $request->phone2,
                 'email1' => $request->email1,
                 'email2' => $request->email2,
+                'map' => $request->map,
                 'facebook' => $request->facebook,
                 'twitter' => $request->twitter,
                 'instagram' => $request->instagram,

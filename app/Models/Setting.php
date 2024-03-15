@@ -23,6 +23,7 @@ class Setting extends Model
         'phone2',
         'email1',
         'email2',
+        'map',
         'facebook',
         'twitter',
         'instagram',

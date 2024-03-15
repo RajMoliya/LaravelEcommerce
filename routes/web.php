@@ -45,6 +45,9 @@ Route::controller(FrontendController::class)->group(function () {
     Route::get("/new_arrivals",'newArrivals');
     Route::get("/featured",'featured');
     Route::get('/search','searchProducts');
+    Route::get('/contact-us','contactUs');
+    Route::get('/about-us','aboutUs');
+    Route::post('/contactUs','userContact');
 });
 
 // WishList
@@ -53,6 +56,7 @@ Route::middleware(['auth'])->group(function () {
         Route::get('/wishlist','index');
     });
 });
+
 
 // Cart
 Route::middleware(['auth'])->group(function () {

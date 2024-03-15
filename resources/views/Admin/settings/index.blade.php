@@ -41,8 +41,39 @@
                             </div>
                             <div class="col-md-6 mb-3">
                                 <label>Website Theme Color</label>
-                                <input type="text" name="theme_color" value="{{ $setting->theme_color ?? '' }}"
-                                    class="form-control">
+                                <div class="d-md-flex align-items-start">
+                                    <div class="nav col-md-3 flex-row nav-pills me-3" id="v-pills-tab" role="tablist"
+                                        aria-orientation="vertical">
+                                        <button wire:loading.attr="disabled" class="nav-link active fw-bold"
+                                            id="pickColorTab-tab" data-bs-toggle="pill" data-bs-target="#pickColorTab"
+                                            type="button" role="tab" aria-controls="pickColorTab"
+                                            aria-selected="true">Pick
+                                            Color</button>
+                                        <button wire:loading.attr="disabled" class="nav-link fw-bold" id="enterColorTab-tab"
+                                            data-bs-toggle="pill" data-bs-target="#enterColorTab" type="button"
+                                            role="tab" aria-controls="enterColorTab" aria-selected="false">Enter
+                                            Color</button>
+                                    </div>
+                                    <div class="tab-content col-md-9" id="v-pills-tabContent">
+                                        <div class="tab-pane active show fade" id="pickColorTab" role="tabpanel"
+                                            aria-labelledby="pickColorTab-tab" tabindex="0">
+                                            <button wire:click="colorPicker" wire:loading.attr="disabled" type="button">
+                                                <span wire:loading.remove wire:target="colorPicker">
+                                                    Pick Color
+                                                </span>
+                                                <input style="width: 100px; height: 50px;" type="color"
+                                                    name="picker_color" value="{{ $setting->theme_color ?? '#000000' }}"
+                                                    class="form-control">
+                                            </button>
+                                        </div>
+                                        <div class="tab-pane fade" id="enterColorTab" role="tabpanel"
+                                            aria-labelledby="enterColorTab-tab" tabindex="0">
+                                            <input wire:click="enterColor" wire:loading.attr="disabled" type="text"
+                                                name="text_color"
+                                                class="form-control">{{ $setting->theme_color ?? '#000000' }}</input>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                             <div class="col-md-6 mb-3">
                                 <label style="margin-bottom: 8px">Upload Logo</label>
@@ -87,6 +118,11 @@
                             <div class="col-md-6 mb-3">
                                 <label>Email 2</label>
                                 <input type="text" name="email2" value="{{ $setting->email2 ?? '' }}"
+                                    class="form-control">
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label>Map Url</label>
+                                <input type="text" name="map" value="{{ $setting->map ?? '' }}"
                                     class="form-control">
                             </div>
                         </div>

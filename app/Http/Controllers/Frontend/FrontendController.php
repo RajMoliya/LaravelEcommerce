@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Frontend;
 
 use App\Models\Slider;
+use App\Models\Message;
 use App\Models\Product;
 use App\Models\Category;
 use Illuminate\Http\Request;
@@ -65,5 +66,22 @@ class FrontendController extends Controller
         else{
             return redirect()->back()->with('message','No Products Found');
         }
+    }
+
+    public function contactUs(){
+        return view('frontend.pages.contact-us');
+    }
+
+    public function aboutUs(){
+        return view('frontend.pages.about-us');
+    }
+
+    public function userContact(Request $request){
+        Message::create([
+            'name' => $request->name,
+            'phone' => $request->phone,
+            'message' => $request->message
+        ]);
+        return redirect()->back()->with('message','Message Sent Successfully');
     }
 }

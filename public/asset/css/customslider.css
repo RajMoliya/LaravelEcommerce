@@ -5,6 +5,24 @@
     margin: 10px 0px;
 }
 
+
+/* Slider  */
+.move-up {
+    position: relative;
+    animation: moveUp 1s ease forwards;
+}
+
+@keyframes moveUp {
+    from {
+        transform: translateY(0);
+    }
+
+    to {
+        transform: translateY(-15px);
+        /* Change the value as per your requirement */
+    }
+}
+
 .carousel-item .custom-carousel-content {
     width: 50%;
     transform: translate(0%, -10%);
@@ -17,7 +35,7 @@
 .custom-carousel-content h1 {
     font-size: 40px;
     font-weight: 700;
-    color: #fff;
+    color: #020202;
     margin-bottom: 30px;
 }
 
@@ -28,7 +46,7 @@
 .custom-carousel-content p {
     font-size: 18px;
     font-weight: 400;
-    color: #fff;
+    color: #ffffff;
     margin-bottom: 30px;
 }
 
@@ -42,6 +60,7 @@
     letter-spacing: 0.5px;
 }
 
+/* Navbar */
 
 .main-navbar {
     border-bottom: 1px solid #ccc;
@@ -141,13 +160,13 @@
 
 .square {
     width: 100%;
-    height: auto;
+    height: 100%;
 }
 
 .square img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
+    width: 100px;
+    height: 200px;
+    /* object-fit: cover; */
     /* Ensures the image covers the entire container */
     aspect-ratio: 1;
     /* Maintains the aspect ratio (1:1) for square images */
@@ -426,4 +445,56 @@
     margin: 0px 10px;
     color: #fff;
     width: 20px;
+}
+
+/* Contact Us  */
+.contact .container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 50px;
+}
+
+.contact h1 {
+    text-align: center;
+    color: #333;
+}
+
+.contact .form-group {
+    margin-bottom: 20px;
+}
+
+.contact label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.contact input[type="text"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.contact textarea {
+    height: 150px;
+}
+
+.contact input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.contact input[type="submit"]:hover {
+    background-color: #45a049;
 }
