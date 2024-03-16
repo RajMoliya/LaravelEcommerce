@@ -124,6 +124,14 @@
     box-shadow: 0 0.125rem 0.25rem rgb(0 0 0 / 8%);
     margin-bottom: 24px;
     background-color: #fff;
+    border-radius: 20px
+}
+
+.category-card:hover {
+    /* Your styles when hovering over product cards */
+    /* For example: */
+    border-color: #999;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
 }
 
 .category-card a {
@@ -156,6 +164,7 @@
     background-color: #fff;
     border: 1px solid #ccc;
     margin-bottom: 24px;
+    border-radius: 20px
 }
 
 .square {

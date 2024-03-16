@@ -26,6 +26,12 @@
     <link rel="stylesheet" href="/asset/css/owl.carousel.min.css">
     <link rel="stylesheet" href="/asset/css/owl.theme.default.min.css">
 
+    <style>
+        a {
+            color: {{ $appSetting->theme_color }}
+        }
+    </style>
+
     {{-- ExZoom --}}
     <link rel="stylesheet" href="/asset/exzoom/jquery.exzoom.css">
 

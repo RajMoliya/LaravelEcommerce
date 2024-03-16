@@ -7,7 +7,8 @@
         <div class="carousel-inner">
 
             @foreach ($sliders as $key => $sliderItem)
-                <div style="background-color: teal" class="carousel-item {{ $key == 0 ? 'active' : '' }}">
+                <div style="background-color: {{ $appSetting->theme_color }}"
+                    class="carousel-item {{ $key == 0 ? 'active' : '' }}">
                     <div>
                         <span class="carousel-caption d-none d-md-block col-md-6">
                             <div class="custom-carousel-content">
