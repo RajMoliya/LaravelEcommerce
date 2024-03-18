@@ -1,6 +1,8 @@
 <div>
     <div class="py-3 py-md-5 bg-light">
         <div class="container">
+            <h4>My Wishlist</h4>
+            <hr>
             <div class="row">
                 @if (session()->has('message'))
                     <div class="alert alert-success">

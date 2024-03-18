@@ -7,18 +7,21 @@
 
 
 /* Slider  */
+
 .move-up {
     position: relative;
-    animation: moveUp 1s ease forwards;
+    animation: fadeIn 1s forwards, moveUp 2s ease forwards;
 }
 
 @keyframes moveUp {
     from {
         transform: translateY(0);
+        opacity: 0;
     }
 
     to {
         transform: translateY(-15px);
+        opacity: 1;
         /* Change the value as per your requirement */
     }
 }
@@ -30,6 +33,10 @@
 
 .custom-carousel-content {
     text-align: start;
+}
+
+.item {
+    border-radius: 20px;
 }
 
 .custom-carousel-content h1 {
@@ -120,7 +127,6 @@
 
 /* Category Start */
 .category-card {
-    border: 1px solid #ddd;
     box-shadow: 0 0.125rem 0.25rem rgb(0 0 0 / 8%);
     margin-bottom: 24px;
     background-color: #fff;
@@ -141,7 +147,7 @@
 .category-card .category-card-img {
     max-height: 260px;
     overflow: hidden;
-    border-bottom: 1px solid #ccc;
+    border-bottom: 1px solid #d4d3d3;
 }
 
 .category-card .category-card-body {
@@ -178,6 +184,7 @@
     /* object-fit: cover; */
     /* Ensures the image covers the entire container */
     aspect-ratio: 1;
+    border-radius: 20px;
     /* Maintains the aspect ratio (1:1) for square images */
 }
 
@@ -192,6 +199,7 @@
     text-decoration: none;
 }
 
+
 .product-card .stock {
     /* position: absolute; */
     color: #fff;
@@ -204,7 +212,6 @@
 .product-card .product-card-img {
     max-height: 260px;
     overflow: hidden;
-    border-bottom: 1px solid #ccc;
 }
 
 .product-card .product-card-img img {

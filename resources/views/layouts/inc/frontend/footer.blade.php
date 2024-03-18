@@ -33,8 +33,8 @@
                     <div class="footer-underline"></div>
                     <div class="mb-2">
                         <p>
-                            <i
-                                class="fa fa-map-marker"></i>{{ $appSetting->address ?? '#444, some main road, some area, some street, bangalore, India - 560077' }}
+                            <i class="fa fa-map-marker"></i>
+                            {{ $appSetting->address ?? '#444, some main road, some area, some street, bangalore, India - 560077' }}
                         </p>
                     </div>
                     <div class="mb-2">
@@ -51,7 +51,7 @@
             </div>
         </div>
     </div>
-    <div class="copyright-area">
+    <div class="copyright-area mb-0">
         <div class="container">
             <div class="row">
                 <div class="col-md-8">
@@ -66,8 +66,8 @@
                         @if ($appSetting->twitter)
                             <a href="{{ $appSetting->twitter }}" target="_blank"><i class="fa fa-twitter"></i></a>
                         @endif
-                        @if ($appSetting->instagarm)
-                            <a href="{{ $appSetting->instagarm }}" target="_blank"><i class="fa fa-instagram"></i></a>
+                        @if ($appSetting->instagram)
+                            <a href="{{ $appSetting->instagram }}" target="_blank"><i class="fa fa-instagram"></i></a>
                         @endif
                         @if ($appSetting->youtube)
                             <a href="{{ $appSetting->youtube }}" target="_blank"><i class="fa fa-youtube"></i></a>

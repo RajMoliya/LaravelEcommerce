@@ -30,6 +30,10 @@
         a {
             color: {{ $appSetting->theme_color }}
         }
+
+        a:hover {
+            color: {{ $appSetting->theme_color }}
+        }
     </style>
 
     {{-- ExZoom --}}

@@ -50,7 +50,7 @@
                                 <a
                                     href="{{ url('/collections/' . $productItem->category->slug . '/' . $productItem->slug) }}">
                                     @if ($productItem->productImages->count() > 0)
-                                        <img src="{{ asset($productItem->productImages[0]->image) }}"
+                                        <img class="p-2" src="{{ asset($productItem->productImages[0]->image) }}"
                                             alt="{{ $productItem->name }}">
                                     @endif
                                 </a>
@@ -64,8 +64,8 @@
                                     </a>
                                 </h5>
                                 <div>
-                                    <span class="selling-price">{{ $productItem->selling_price }}</span>
-                                    <span class="original-price">{{ $productItem->original_price }}</span>
+                                    <span class="selling-price">&#8377;{{ $productItem->selling_price }}</span>
+                                    <span class="original-price">&#8377;{{ $productItem->original_price }}</span>
                                 </div>
                             </div>
                         </div>

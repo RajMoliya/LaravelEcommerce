@@ -139,9 +139,9 @@
                     <div class="owl-carousel owl-theme trending-product">
                         @if ($category->relatedProducts)
                             @foreach ($category->relatedProducts as $relatedProductItem)
-                                <div class="item mb-3">
-                                    <div class="product-card square">
-                                        <div class="product-card-img">
+                                <div class="item">
+                                    <div class="product-card" style="border-radius: 20px">
+                                        <div class="product-card-img square">
                                             <a
                                                 href="{{ url('/collections/' . $relatedProductItem->category->slug . '/' . $relatedProductItem->slug) }}">
                                                 @if ($relatedProductItem->productImages->count() > 0)
@@ -160,9 +160,9 @@
                                             </h5>
                                             <div>
                                                 <span
-                                                    class="selling-price">{{ $relatedProductItem->selling_price }}</span>
+                                                    class="selling-price">&#x20B9;{{ $relatedProductItem->selling_price }}</span>
                                                 <span
-                                                    class="original-price">{{ $relatedProductItem->original_price }}</span>
+                                                    class="original-price">&#x20B9;{{ $relatedProductItem->original_price }}</span>
                                             </div>
                                         </div>
                                     </div>
@@ -208,9 +208,9 @@
                                                 </h5>
                                                 <div>
                                                     <span
-                                                        class="selling-price">{{ $relatedProductItem->selling_price }}</span>
+                                                        class="selling-price">&#x20B9;{{ $relatedProductItem->selling_price }}</span>
                                                     <span
-                                                        class="original-price">{{ $relatedProductItem->original_price }}</span>
+                                                        class="original-price">&#x20B9;{{ $relatedProductItem->original_price }}</span>
                                                 </div>
                                             </div>
                                         </div>

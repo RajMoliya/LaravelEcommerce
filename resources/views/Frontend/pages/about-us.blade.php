@@ -10,7 +10,7 @@
     <hr>
     <div class="row mb-3 mt-3">
 
-        <div class="col-6">
+        <div class="col-6" style="padding: 30px">
             <h4 class="text-center">Welcome to Ecommerce</h4>
             <div class="underline w-100"></div>At [Company Name], our mission is to revolutionize the way people interact
             with technology. We
@@ -27,16 +27,19 @@
             core values and embracing diversity and inclusivity, we are committed to making a positive impact on society and
             shaping a brighter future for generations to come.
         </div>
-        <div class="col-6">
-            <img class="img-fluid" src="https://cdn.pixabay.com/photo/2015/01/09/02/45/laptop-593673_1280.jpg" alt="">
+        <div class="col-6" style="padding: 30px">
+            <img class="img-fluid" style="border-radius: 7px"
+                src="https://cdn.pixabay.com/photo/2015/01/09/02/45/laptop-593673_1280.jpg" alt="">
         </div>
     </div>
     <div class="row mb-3 mt-3">
-        <div class="col-6">
-            <img class="img-fluid" src="https://cdn.pixabay.com/photo/2015/01/09/02/45/laptop-593673_1280.jpg"
+        <div class="col-6" style="padding: 30px">
+            <img class="img-fluid" style="width: 100%;height:100% ; border-radius: 7px"
+                src="{{ asset('uploads/images/download (1).jpg
+                                                                                ') }}"
                 alt="">
         </div>
-        <div class="col-6">
+        <div class="col-6" style="padding: 30px">
             <h4 class="text-center">Why Us</h4>
             <div class="underline w-100"></div>At [Company Name], our mission is to revolutionize the way people interact
             with technology. We
@@ -55,7 +58,7 @@
         </div>
     </div>
     <div class="row mb-3 mt-3">
-        <div class="col-6">
+        <div class="col-6" style="padding: 30px">
             <h4 class="text-center">Templete for Quality and Variety</h4>
             <div class="underline w-100"></div>At [Company Name], our mission is to revolutionize the way people interact
             with technology. We
@@ -72,8 +75,8 @@
             core values and embracing diversity and inclusivity, we are committed to making a positive impact on society and
             shaping a brighter future for generations to come.
         </div>
-        <div class="col-6">
-            <img class="img-fluid" src="https://cdn.pixabay.com/photo/2015/01/09/02/45/laptop-593673_1280.jpg"
+        <div class="col-6" style="padding: 30px">
+            <img style="width: 100%;height:100% ; border-radius: 7px" src="{{ asset('uploads/images/ss.jpg') }}"
                 alt="">
         </div>
     </div>
